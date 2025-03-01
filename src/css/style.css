@@ -1,0 +1,56 @@
+.cardValidator {
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 25%;
+  }
+  
+  img {
+    box-sizing: border-box;
+    width: 13%;
+    height: 40px;
+    border-radius: 10%;
+    opacity: 1;
+  }
+  
+  button {
+    background-color: forestgreen;
+    border: 1px solid green;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border-radius: 5%;
+  }
+  
+  input {
+    height: 25px;
+    z-index: 1;
+  }
+  
+  input:focus {
+    box-shadow: 0 0 10px green;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 5%;
+  }
+  
+  .cardMiniature {
+    margin-bottom: 10px;
+    display: flex;
+    
+  }
+  
+  label {
+    font-size: 18px;
+  }
+  
+  .result {
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+  }
+  
