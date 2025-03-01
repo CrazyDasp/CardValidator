@@ -6,7 +6,7 @@ describe('Card Validator', () => {
 
   beforeEach(async () => {
     browser = await puppeteer.launch({
-      headless: false,
+      headless: true,
       slowMo: 100,
       devtools: false,
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
@@ -20,8 +20,8 @@ describe('Card Validator', () => {
   test('Testing valid card number', async () => {
     await page.goto('http://localhost:8080');
 
-    const input = await page.$('input');
-    const submitButton = await page.$('button');
+    const input = await page.$('input')
+    const submitButton = await page.$('button')
 
     await input.type('789665123657')
     await submitButton.click()
@@ -30,5 +30,9 @@ describe('Card Validator', () => {
     const resultText = await page.$eval('.result', el => el.textContent)
 
     expect(resultText).toBe('Validator result: Number is a valid')
+  })
+
+  afterAll(async () => {
+    await browser.close()
   })
 })
