@@ -18,7 +18,7 @@ describe('Card Validator', () => {
   jest.setTimeout(15000)
 
   test('Testing valid card number', async () => {
-    await page.goto('http://localhost:8080');
+    await page.goto('http://192.168.0.187:8080/');
 
     const input = await page.$('input')
     const submitButton = await page.$('button')
