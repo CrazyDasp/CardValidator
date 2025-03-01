@@ -9,6 +9,7 @@ describe('Card Validator', () => {
       headless: false,
       slowMo: 100,
       devtools: false,
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
     });
 
     page = await browser.newPage()
