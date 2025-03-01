@@ -29,9 +29,5 @@ describe('Card Validator', () => {
     const resultText = await page.$eval('.result', el => el.textContent)
 
     expect(resultText).toBe('Validator result: Number is a valid')
-  });
-
-  afterEach(async () => {
-    await browser.close()
-  });
-});
+  })
+})
