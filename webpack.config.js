@@ -33,6 +33,7 @@ module.exports = {
     open: true,
     compress: true,
     port: 9030,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
   },
   plugins: [
     new HtmlWebpackPlugin({
