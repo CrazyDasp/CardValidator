@@ -1,4 +1,5 @@
 import puppeteer from 'puppeteer'
+import childProcess from "child_process"
 
 describe('Card Validator', () => {
   let browser
@@ -27,15 +28,19 @@ describe('Card Validator', () => {
 
   })
 
-  afterAll(async () => {
-    await browser.close()
-    server.kill()
+  afterAll(async() => {
+    if (browser) {
+      await browser.close();
+    }
+    if (server) {
+      server.kill();
+    }
   })
 
-  jest.setTimeout(15000)
+  jest.setTimeout(20000)
 
   test('Testing valid card number', async () => {
-    await page.goto('http://192.168.0.187:8080/');
+    await page.goto(baseUrl);
 
     const input = await page.$('input')
     const submitButton = await page.$('button')

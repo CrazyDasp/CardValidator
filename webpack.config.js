@@ -28,7 +28,7 @@ module.exports = {
       },
     ],
   },
-  DevServer: {
+  devServer: {
     historyApiFallback: true,
     open: true,
     compress: true,
