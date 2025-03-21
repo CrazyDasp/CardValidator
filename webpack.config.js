@@ -28,6 +28,12 @@ module.exports = {
       },
     ],
   },
+  DevServer: {
+    historyApiFallback: true,
+    open: true,
+    compress: true,
+    port: 9030,
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
